@@ -1,0 +1,15 @@
+------------------------- DATA-VALID-READY CONNECTORS --------------------------
+
+A collection of interface modules which can be used to connect different
+subsystems together using the data-valid-ready convention.
+
+FIFO:
+    A simple FIFO using distributed RAM, with two parameters:
+    WIDTH: The bit-width of the FIFO
+    DEPTH: The log₂(FIFO depth), e.g DEPTH=3 implies a FIFO depth of 8.
+
+CONV_8TO16:
+    An adaptor which reads from an 8-bit channel and writes to a 16-bit channel.
+
+CONV_16TO8:
+    An adaptor which reads from a 16-bit channel and writes to an 8-bit channel.

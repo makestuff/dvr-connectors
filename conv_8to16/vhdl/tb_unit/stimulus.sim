@@ -1,0 +1,42 @@
+# Stimulus file for SDRAM controller
+#
+# Line format:
+#
+#       data8
+#      /
+#     /   valid8
+#    /   /
+#   /   /   ready16
+#  /   /   /
+# |   /   /
+# |  |   /
+# |  |  /
+# |  | |
+# |  | |
+# DD V R
+#
+12 1 1  # MSB
+34 1 1  # LSB
+
+# In the MSB state, we just register the incoming data, so ready16 is ignored
+56 0 0  # MSB
+56 1 0  # MSB
+
+# In the LSB state, both ready16 and valid8 have to be asserted
+78 0 0  # LSB
+78 0 1  # LSB
+78 1 0  # LSB
+78 1 1  # LSB
+
+# Should have 50% duty cycle in steady state
+AB 1 1
+BC 1 1
+
+CD 1 1
+DE 1 1
+
+EF 1 1
+F0 1 1
+
+01 1 1
+12 1 1

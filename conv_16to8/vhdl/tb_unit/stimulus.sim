@@ -1,0 +1,25 @@
+# Stimulus file for SDRAM controller
+#
+# Line format:
+#
+#       data16
+#      /
+#     /     valid16
+#    /     /
+#   /     /   ready8
+#  /     /   /
+# |     /   /
+# |    |   /
+# |    |  /
+# |    | |
+# |    | |
+# DDDD V R
+#
+1234 1 1
+XXXX 0 1
+2345 1 1
+XXXX 0 1
+3456 1 1
+XXXX 0 1
+4567 1 1
+XXXX 0 1
