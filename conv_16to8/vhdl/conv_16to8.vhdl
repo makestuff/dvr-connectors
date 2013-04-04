@@ -2,20 +2,19 @@
 -- Copyright (C) 2012 Chris McClelland
 --
 -- This program is free software: you can redistribute it and/or modify
--- it under the terms of the GNU General Public License as published by
+-- it under the terms of the GNU Lesser General Public License as published by
 -- the Free Software Foundation, either version 3 of the License, or
 -- (at your option) any later version.
 --
 -- This program is distributed in the hope that it will be useful,
 -- but WITHOUT ANY WARRANTY; without even the implied warranty of
 -- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
--- GNU General Public License for more details.
+-- GNU Lesser General Public License for more details.
 --
--- You should have received a copy of the GNU General Public License
+-- You should have received a copy of the GNU Lesser General Public License
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --
 library ieee;
-
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -37,7 +36,7 @@ entity conv_16to8 is
 	);
 end entity;
 
-architecture behavioural of conv_16to8 is
+architecture rtl of conv_16to8 is
 	type StateType is (
 		S_WRITE_MSB,
 		S_WRITE_LSB
