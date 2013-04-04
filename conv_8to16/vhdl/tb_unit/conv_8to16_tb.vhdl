@@ -23,7 +23,7 @@ use std.textio.all;
 use work.hex_util.all;
 
 entity conv_8to16_tb is
-end conv_8to16_tb;
+end entity;
 
 architecture behavioural of conv_8to16_tb is
 	-- Clocks
