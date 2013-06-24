@@ -1,0 +1,51 @@
+# Stimulus file for dvr conversion
+#
+# Line format:
+#
+#       data8
+#      /
+#     /   valid8
+#    /   /
+#   /   /   ready24
+#  /   /   /
+# |   /   /
+# |  |   /
+# |  |  /
+# |  | |
+# |  | |
+# DD V R
+#
+12 1 1  # MSB
+34 1 1  # MID
+56 1 1  # LSB
+
+# In the MSB state, we just register the incoming data, so ready24 is ignored
+78 0 0  # MSB
+78 1 0  # MSB
+
+# In the MID state, we just register the incoming data, so ready24 is ignored
+9A 0 0  # MID
+9A 1 0  # MID
+
+# In the LSB state, both ready24 and valid8 have to be asserted
+BC 0 0  # LSB
+BC 0 1  # LSB
+BC 1 0  # LSB
+BC 1 1  # LSB
+
+# Should have 1/3 duty cycle in steady state
+12 1 1
+34 1 1
+56 1 1
+
+78 1 1
+9A 1 1
+BC 1 1
+
+DE 1 1
+F0 1 1
+12 1 1
+
+34 1 1
+56 1 1
+78 1 1

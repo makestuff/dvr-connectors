@@ -14,5 +14,8 @@ CONV_8TO16:
 CONV_16TO8:
     An adaptor which reads from a 16-bit channel and writes to an 8-bit channel.
 
+CONV_8TO24 (Contributed by Joel Pérez Izquierdo):
+    An adaptor which reads from an 8-bit channel and writes to an 24-bit channel.
+
 CONV_24TO8 (Contributed by Joel Pérez Izquierdo):
     An adaptor which reads from a 24-bit channel and writes to an 8-bit channel.
