@@ -81,7 +81,7 @@ begin
 			-- Wait for the MSB to arrive:
 			when others =>
 				ready8_out <= '1';  -- ready for data from 8-bit side
-				data16_out <= (others => '0');
+				data16_out <= (others => 'X');
 				if ( valid8_in = '1' ) then
 					msb_next <= data8_in;
 					state_next <= S_WAIT_LSB;
