@@ -15,7 +15,7 @@
 -- along with this program.  If not, see <http://www.gnu.org/licenses/>.
 --
 
---	Modified from conv_16to8.vhdl by Chris McClelland
+-- Modified from conv_16to8.vhdl by Chris McClelland
 --
 library ieee;
 use ieee.std_logic_1164.all;
