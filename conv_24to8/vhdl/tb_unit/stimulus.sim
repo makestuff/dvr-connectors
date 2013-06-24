@@ -1,0 +1,29 @@
+# Stimulus file for dvr conversion
+#
+# Line format:
+#
+#       data24
+#      /
+#     /       valid24
+#    /       /
+#   /       /   ready8
+#  /       /   /
+# |       /   /
+# |      |   /
+# |      |  /
+# |      | |
+# |      | |
+# DDDDDD V R
+#
+123456 1 1
+XXXXXX 0 1
+XXXXXX 0 1
+ABCDEF 1 1
+XXXXXX 0 1
+XXXXXX 0 1
+A1B2C3 1 1
+XXXXXX 0 1
+XXXXXX 0 1
+D4E5F6 1 1
+XXXXXX 0 1
+XXXXXX 0 1
