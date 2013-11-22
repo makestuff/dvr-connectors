@@ -88,7 +88,8 @@ begin
 		'1';
 
 	outputData_out <=
-		fifoData(to_integer(rdPtr));
+		fifoData(to_integer(rdPtr)) when outputValid = '1'
+		else (others => 'X');
 
 	outputValid_out <= outputValid;
 	outputValid <=
