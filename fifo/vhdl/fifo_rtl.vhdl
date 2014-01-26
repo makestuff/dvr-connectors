@@ -24,7 +24,7 @@ architecture rtl of fifo is
 	constant DEPTH_UBOUND : natural := 2**DEPTH-1;
 	constant WIDTH_UBOUND : natural := WIDTH-1;
 	type RegFileType is array(DEPTH_UBOUND downto 0) of std_logic_vector(WIDTH_UBOUND downto 0);
-	signal fifoData       : RegFileType := (others => (others => '0'));
+	signal fifoData       : RegFileType; -- := (others => (others => '0'));
 	signal fifoData_next  : RegFileType;
 
 	-- Read & write pointers, with auto-wrap incremented versions
@@ -71,13 +71,11 @@ begin
 	end process;
 
 	-- Update reg file, write pointer & isFull flag
-	process(fifoData, wrPtr, wrPtr_inc, inputData_in, isWriting)
+	process(fifoData, wrPtr, inputData_in, isWriting)
 	begin
 		fifoData_next <= fifoData;
-		wrPtr_next <= wrPtr;
 		if ( isWriting = '1' ) then
 			fifoData_next(to_integer(wrPtr)) <= inputData_in;
-			wrPtr_next <= wrPtr_inc;
 		end if;
 	end process;
 
