@@ -8,14 +8,20 @@ FIFO:
     WIDTH: The bit-width of the FIFO
     DEPTH: The log₂(FIFO depth), e.g DEPTH=3 implies a FIFO depth of 8.
 
-CONV_8TO16:
+CONV-8TO16:
     An adaptor which reads from an 8-bit channel and writes to a 16-bit channel.
 
-CONV_16TO8:
+CONV-16TO8:
     An adaptor which reads from a 16-bit channel and writes to an 8-bit channel.
 
-CONV_8TO24 (Contributed by Joel Pérez Izquierdo):
+CONV-8TO24 (Contributed by Joel Pérez Izquierdo):
     An adaptor which reads from an 8-bit channel and writes to an 24-bit channel.
 
-CONV_24TO8 (Contributed by Joel Pérez Izquierdo):
+CONV-24TO8 (Contributed by Joel Pérez Izquierdo):
     An adaptor which reads from a 24-bit channel and writes to an 8-bit channel.
+
+CONV-40TO8:
+    An adaptor which reads from a 40-bit channel and writes to an 8-bit channel.
+
+CONV-48TO8:
+    An adaptor which reads from a 48-bit channel and writes to an 8-bit channel.
